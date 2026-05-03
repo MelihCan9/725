@@ -1,0 +1,81 @@
+{
+  "config": {
+    "base_dir": "/content/local_dataset",
+    "output_dir": "/content/phase2_outputs",
+    "model_name": "Salesforce/blip-image-captioning-base",
+    "caption_column": "hybrid_gemma3-4b",
+    "train_frac": 0.8,
+    "val_frac": 0.1,
+    "seed": 42,
+    "batch_size": 16,
+    "eval_batch_size": 32,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "epochs": 3,
+    "warmup_ratio": 0.05,
+    "grad_clip": 1.0,
+    "prefix_length": 8,
+    "bridge_hidden": 256,
+    "bridge_dropout": 0.1,
+    "max_caption_length": 60,
+    "max_gen_length": 50,
+    "num_workers": 2,
+    "use_wandb": true,
+    "wandb_project": "di725-phase2",
+    "wandb_run_name": "",
+    "eval_subset": null
+  },
+  "B1_history": {
+    "train_loss": [
+      6.015633624076843,
+      4.066124344825744,
+      3.9434532155990603
+    ],
+    "val_loss": [
+      4.239098966121674,
+      3.945610709488392,
+      3.9157717302441597
+    ],
+    "tag": "B1",
+    "best_val_loss": 3.9157717302441597,
+    "ckpt_path": "/content/phase2_outputs/B1_best.pt"
+  },
+  "M1_history": {
+    "train_loss": [
+      4.846643402576446,
+      3.656097680568695,
+      3.5808792505264284
+    ],
+    "val_loss": [
+      3.676104597747326,
+      3.5359630286693573,
+      3.510682187974453
+    ],
+    "tag": "M1",
+    "best_val_loss": 3.510682187974453,
+    "ckpt_path": "/content/phase2_outputs/M1_best.pt"
+  },
+  "results": {
+    "B0_zero_shot": {
+      "BLEU-1": 0.0001776268304127264,
+      "BLEU-4": 7.300026339799871e-06,
+      "METEOR": 0.03143300520136155,
+      "ROUGE-L": 0.09816345996641243
+    },
+    "B1_uncond_prefix": {
+      "BLEU-1": 0.3529693995387744,
+      "BLEU-4": 0.1395460344661978,
+      "METEOR": 0.2768832020605501,
+      "ROUGE-L": 0.3601816697026603
+    },
+    "M1_seg_prefix": {
+      "BLEU-1": 0.38042535454293025,
+      "BLEU-4": 0.16084151921149717,
+      "METEOR": 0.31525098434865984,
+      "ROUGE-L": 0.38144105723672994
+    }
+  },
+  "n_train": 8000,
+  "n_val": 1000,
+  "n_test": 1000
+}
