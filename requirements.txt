@@ -1,0 +1,12 @@
+transformers==4.44.2
+accelerate==0.34.2
+evaluate==0.4.3
+nltk==3.9.1
+rouge-score==0.1.2
+wandb==0.18.5
+torch>=2.0.0
+pillow
+pandas
+numpy
+matplotlib
+tqdm
